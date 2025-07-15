@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="login" class="section">
+        <div class="auth-page" style="margin: -2rem; min-height: 80vh">
+          <div class="auth-container">
+            <div class="auth-header">
+              <h1>Connexion</h1>
+              <p>Accédez à votre compte</p>
+            </div>
+
+            <form id="formLogin">
+              <div class="form-group">
+                <label for="emailLogin">Email</label>
+                <input type="email" id="emailLogin" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="passwordLogin">Mot de passe</label>
+                <input
+                  type="password"
+                  id="passwordLogin"
+                  name="password"
+                  required
+                />
+              </div>
+
+              <div style="text-align: center">
+                <button type="submit" class="btn" style="width: 100%">
+                  Se connecter
+                </button>
+              </div>
+            </form>
+
+            <div class="auth-links">
+              <p>
+                Pas encore de compte ?
+                <a href="index.html">S'inscrire</a>
+              </p>
+              <p><a href="#">Mot de passe oublié ?</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let utilisateur = JSON.parse(localStorage.getItem("utilisateur")) || [];
+      document
+        .getElementById("formLogin")
+        .addEventListener("submit", function name(e) {
+          e.preventDefault();
+
+          const emailLogin = document.getElementById("emailLogin").value.trim();
+          const passwordLogin = document
+            .getElementById("passwordLogin")
+            .value.trim();
+          if (!emailLogin || !passwordLogin) {
+            alert("io vid");
+            return;
+          }
+
+          const connexion = utilisateur.find(
+            (item) => item.email == emailLogin && item.password == passwordLogin
+          );
+
+          if (connexion) {
+            alert("connexion ok");
+            localStorage.setItem("SessionUtilisateur", emailLogin);
+            location.href = "listeEtudiant.html";
+          } else {
+            alert("Email ou mot de passe est incorrect");
+          }
+        });
+    </script>
+  </body>
+</html>

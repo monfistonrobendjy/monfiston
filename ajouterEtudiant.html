@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div><a href="listeEtudiant.html">Retour</a></div>
+      <div id="add-student" class="section">
+        <h2>Ajouter un Étudiant</h2>
+
+        <div class="form-container">
+          <form>
+            <div class="form-group">
+              <label for="nom">Nom </label>
+              <input type="text" id="nom" name="nom" required />
+            </div>
+
+            <div class="form-group">
+              <label for="prenom">Prénom </label>
+              <input type="text" id="prenom" name="prenom" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email </label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" />
+            </div>
+
+            <div style="text-align: center">
+              <button type="submit" class="btn">Ajouter l'étudiant</button>
+              <button
+                type="reset"
+                class="btn btn-secondary"
+                style="margin-left: 1rem"
+              >
+                Réinitialiser
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

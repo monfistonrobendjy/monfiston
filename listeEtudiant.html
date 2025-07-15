@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div><a href="ajouterEtudiant.html">Ajouter </a></div>
+      <div id="students" class="section">
+        <div style="cursor: pointer" onclick="deconnecter()">deconnecter</div>
+        <div id="message"></div>
+
+        <h2>Liste des Étudiants</h2>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Date d'inscription</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="Affiche"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let Session = localStorage.getItem("SessionUtilisateur");
+      let utilisateur = JSON.parse(localStorage.getItem("utilisateur")) || [];
+      let Affiche = document.getElementById("Affiche");
+      if (Session === null) {
+        location.href = "connexion.html";
+      }
+
+      let html = "";
+
+      for (let util of utilisateur) {
+        html += ` <tr>
+                <td>${util.id}</td>
+                <td>${util.nom}</td>
+                <td>${util.prenom}</td>
+                <td>${util.email}</td>
+                <td>${util.dateInscrit}</td>
+                <td>
+                  <div class="table-actions">
+                    <button class="btn btn-small btn-secondary">
+                      Modifier
+                    </button>
+                    <button class="btn btn-small btn-danger">Supprimer</button>
+                  </div>
+                </td>
+              </tr>`;
+      }
+      Affiche.innerHTML = html;
+
+      function deconnecter() {
+
+        function SupprimerUser(id) {
+
+          function ModifierUser(id){
+            if (comfirm ("eske ou vle modifyel tout bon???")) {
+              utilisateur=utilisateur.map((user)=>{
+                if (user.id=== id) {
+                  const nouvoNom = prompt("nouvo Nom")
+                }
+              }
+            }
+          }
+        }
+        localStorage.removeItem("SessionUtilisateur");
+        location.href = "connexion.html";
+      }
+    </script>
+  </body>
+</html>
