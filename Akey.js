@@ -1,3 +1,6 @@
-function toggleMenu(){
-    document.getElementById('mainMenu').classList.toggle('show')
-}
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+</script>
