@@ -1,30 +1,37 @@
-css.menu{
-    display: flex;
-    gap: 30px;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-@media(max-width: 600px) {
-    .menu{
-        display: none;
-        flex-direction: column;
-        background: #3489D4;
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        padding: 10px;
-    }}
-.menu.show {
-    display: flex;
-}
+
 .menu-toggle {
-    display: block;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
-.menu-toggle{
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
     display: none;
-    font-size: 30px;
-    cursor: pointer;
+    flex-direction: column;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    background: none;
-    border: none;
+    top: 60px;
+    background: #fff;
+    width: 100%;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
