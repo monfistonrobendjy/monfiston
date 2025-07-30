@@ -42,7 +42,7 @@
             <div class="auth-links">
               <p>
                 Pas encore de compte ?
-                <a href="index.html">S'inscrire</a>
+                <a href="inscription.html">S'inscrire</a>
               </p>
               <p><a href="#">Mot de passe oublié ?</a></p>
             </div>
@@ -50,34 +50,5 @@
         </div>
       </div>
     </div>
-    <script>
-      let utilisateur = JSON.parse(localStorage.getItem("utilisateur")) || [];
-      document
-        .getElementById("formLogin")
-        .addEventListener("submit", function name(e) {
-          e.preventDefault();
-
-          const emailLogin = document.getElementById("emailLogin").value.trim();
-          const passwordLogin = document
-            .getElementById("passwordLogin")
-            .value.trim();
-          if (!emailLogin || !passwordLogin) {
-            alert("io vid");
-            return;
-          }
-
-          const connexion = utilisateur.find(
-            (item) => item.email == emailLogin && item.password == passwordLogin
-          );
-
-          if (connexion) {
-            alert("connexion ok");
-            localStorage.setItem("SessionUtilisateur", emailLogin);
-            location.href = "listeEtudiant.html";
-          } else {
-            alert("Email ou mot de passe est incorrect");
-          }
-        });
-    </script>
   </body>
 </html>

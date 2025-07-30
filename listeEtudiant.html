@@ -10,7 +10,6 @@
     <div class="container">
       <div><a href="ajouterEtudiant.html">Ajouter </a></div>
       <div id="students" class="section">
-        <div style="cursor: pointer" onclick="deconnecter()">deconnecter</div>
         <div id="message"></div>
 
         <h2>Liste des Étudiants</h2>
@@ -23,33 +22,19 @@
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Email</th>
+                <th>Téléphone</th>
                 <th>Date d'inscription</th>
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody id="Affiche"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      let Session = localStorage.getItem("SessionUtilisateur");
-      let utilisateur = JSON.parse(localStorage.getItem("utilisateur")) || [];
-      let Affiche = document.getElementById("Affiche");
-      if (Session === null) {
-        location.href = "connexion.html";
-      }
-
-      let html = "";
-
-      for (let util of utilisateur) {
-        html += ` <tr>
-                <td>${util.id}</td>
-                <td>${util.nom}</td>
-                <td>${util.prenom}</td>
-                <td>${util.email}</td>
-                <td>${util.dateInscrit}</td>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Dupont</td>
+                <td>Jean</td>
+                <td>jean.dupont@email.com</td>
+                <td>+509 43343389</td>
+                <td>2024-01-15</td>
                 <td>
                   <div class="table-actions">
                     <button class="btn btn-small btn-secondary">
@@ -58,27 +43,75 @@
                     <button class="btn btn-small btn-danger">Supprimer</button>
                   </div>
                 </td>
-              </tr>`;
-      }
-      Affiche.innerHTML = html;
-
-      function deconnecter() {
-
-        function SupprimerUser(id) {
-
-          function ModifierUser(id){
-            if (comfirm ("eske ou vle modifyel tout bon???")) {
-              utilisateur=utilisateur.map((user)=>{
-                if (user.id=== id) {
-                  const nouvoNom = prompt("nouvo Nom")
-                }
-              }
-            }
-          }
-        }
-        localStorage.removeItem("SessionUtilisateur");
-        location.href = "connexion.html";
-      }
-    </script>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>Martin</td>
+                <td>Marie</td>
+                <td>marie.martin@email.com</td>
+                <td>+509 43343389</td>
+                <td>2024-01-16</td>
+                <td>
+                  <div class="table-actions">
+                    <button class="btn btn-small btn-secondary">
+                      Modifier
+                    </button>
+                    <button class="btn btn-small btn-danger">Supprimer</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>003</td>
+                <td>Bernard</td>
+                <td>Paul</td>
+                <td>paul.bernard@email.com</td>
+                <td>+509 43343389</td>
+                <td>2024-01-17</td>
+                <td>
+                  <div class="table-actions">
+                    <button class="btn btn-small btn-secondary">
+                      Modifier
+                    </button>
+                    <button class="btn btn-small btn-danger">Supprimer</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>Moreau</td>
+                <td>Sophie</td>
+                <td>sophie.moreau@email.com</td>
+                <td>+509 43343389</td>
+                <td>2024-01-18</td>
+                <td>
+                  <div class="table-actions">
+                    <button class="btn btn-small btn-secondary">
+                      Modifier
+                    </button>
+                    <button class="btn btn-small btn-danger">Supprimer</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>005</td>
+                <td>Petit</td>
+                <td>Pierre</td>
+                <td>pierre.petit@email.com</td>
+                <td>+509 43343389</td>
+                <td>2024-01-19</td>
+                <td>
+                  <div class="table-actions">
+                    <button class="btn btn-small btn-secondary">
+                      Modifier
+                    </button>
+                    <button class="btn btn-small btn-danger">Supprimer</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
