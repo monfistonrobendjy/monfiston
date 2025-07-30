@@ -35,3 +35,13 @@ nav {
     display: flex;
   }
 }
+
+/*  thèmes */
+body.light-theme {
+  background: #fff;
+  color: #222;
+}
+body.dark-theme {
+  background: #222;
+  color: #fff;
+}
