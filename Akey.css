@@ -154,6 +154,7 @@ nav {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 24px;
+color: #ffffff;
 }
 
 /* --- BUTTONS --- */
@@ -234,7 +235,7 @@ section {
 
 .feature-card p {
   font-size: 1rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* --- ABOUT --- */
