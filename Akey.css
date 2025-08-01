@@ -234,7 +234,7 @@ section {
 
 .feature-card p {
   font-size: 1rem;
-  color: #555;
+  color: #ffffff;
 }
 
 /* --- ABOUT --- */
@@ -265,7 +265,7 @@ body.dark-theme .container,
 body.dark-theme section,
 body.dark-theme .feature-card,
 body.dark-theme .about {
-  background: transparent !important;
+  background: transparent;
 }
 
 body.dark-theme .feature-card {
@@ -277,7 +277,7 @@ body.dark-theme .feature-card {
 body.dark-theme header,
 body.dark-theme footer {
   background: #23244a !important;
-  color: #fff !important;
+  color: #fff;
 }
 
 body.dark-theme .section-title {
@@ -285,7 +285,7 @@ body.dark-theme .section-title {
 }
 
 body.dark-theme .feature-card h3 {
-  color: #aed4f7 !important;
+  color: #aed4f7;
 }
 
 body.dark-theme .cta-button {
@@ -299,7 +299,7 @@ body.dark-theme .cta-button:focus {
   color: #fff;
 }
 
-/* --- SCROLLBAR --- */
+
 ::-webkit-scrollbar {
   width: 8px;
   background: #e1e1ea;
