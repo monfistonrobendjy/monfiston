@@ -1,37 +1,32 @@
+// Bouton meni toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.querySelector('nav.navbar');
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navbar.classList.toggle('open');
+});
 
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  }
-</script>
-// Script à placer dans votre fichier JS ou dans une balise <script>
+// Fè bouton tèm nan mache
 const themeBtn = document.getElementById('toggle-theme');
-const body = document.body;
-
-// Fonction pour appliquer le thème sauvegardé ou le thème par défaut
 function applyTheme() {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
-    body.classList.add('dark-theme');
-    body.classList.remove('light-theme');
+    document.body.classList.add('dark-theme');
+    themeBtn.textContent = '☀️'; // Klè
   } else {
-    body.classList.add('light-theme');
-    body.classList.remove('dark-theme');
+    document.body.classList.remove('dark-theme');
+    themeBtn.textContent = '🌙'; // Fènwa
   }
 }
-
-// Changement de thème au clic sur le bouton
 themeBtn.addEventListener('click', () => {
-  if (body.classList.contains('light-theme')) {
-    body.classList.remove('light-theme');
-    body.classList.add('dark-theme');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    body.classList.remove('dark-theme');
-    body.classList.add('light-theme');
+  if (document.body.classList.contains('dark-theme')) {
+    document.body.classList.remove('dark-theme');
     localStorage.setItem('theme', 'light');
+    themeBtn.textContent = '🌙';
+  } else {
+    document.body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
+    themeBtn.textContent = '☀️';
   }
 });
-
-// Appliquer le thème au chargement de la page
 applyTheme();
