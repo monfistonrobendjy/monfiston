@@ -1,18 +1,17 @@
 /*Enskripsyon css*/
-
     body {
-      background: #f8f9ff;
+      background: #f5f6fa;
       font-family: Arial, sans-serif;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
     }
     .form-box {
       background: #fff;
-      padding: 28px 22px 20px 22px;
-      border-radius: 12px;
-      box-shadow: 0 2px 20px rgba(78,84,200,0.08);
+      padding: 28px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(78,84,200,0.10);
       width: 100%;
       max-width: 340px;
     }
@@ -23,10 +22,10 @@
     }
     input, button {
       width: 100%;
-      padding: 11px 10px;
       margin-bottom: 13px;
-      border: 1.3px solid #d3d7f9;
-      border-radius: 8px;
+      padding: 10px 9px;
+      border: 1px solid #c5c8e7;
+      border-radius: 7px;
       font-size: 1rem;
     }
     input:focus {
@@ -42,8 +41,9 @@
       transition: background 0.2s;
     }
     button:hover {
-      background: #2d3074;
+      background: #23244a;
     }
     @media (max-width: 400px) {
       .form-box { padding: 14px 2vw; }
     }
+  
