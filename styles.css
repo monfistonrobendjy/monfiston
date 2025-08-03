@@ -1,6 +1,6 @@
 /*Enskripsyon css*/
     body {
-      background: #f5f6fa;
+      background: #00000;
       font-family: Arial, sans-serif;
       min-height: 100vh;
       display: flex;
@@ -11,7 +11,7 @@
       background: #fff;
       padding: 28px 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 14px rgba(78,84,200,0.10);
+      box-shadow: 50px 2px 14px rgba(78,84,200,0.10);
       width: 100%;
       max-width: 340px;
     }
