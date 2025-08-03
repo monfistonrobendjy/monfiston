@@ -255,7 +255,7 @@ footer a {
   text-decoration: underline dashed;
 }
 
-/* --- DARK THEME OVERRIDES --- */
+
 body.dark-theme .container,
 body.dark-theme section,
 body.dark-theme .feature-card,
@@ -269,14 +269,13 @@ body.dark-theme .feature-card {
   box-shadow: 0 2px 18px rgba(40,40,70,0.07);
 }
 
-body.dark-theme header,
-body.dark-theme footer {
+body.dark-theme header, footer {
   background: #23244a !important;
   color: #fff;
 }
 
 body.dark-theme .section-title {
-  color: #aed4f7;
+  color: #ffffff;
 }
 
 body.dark-theme .feature-card h3 {
@@ -288,8 +287,7 @@ body.dark-theme .cta-button {
   color: #fff;
 }
 
-body.dark-theme .cta-button:hover,
-body.dark-theme .cta-button:focus {
+body.dark-theme .cta-button:hover,.cta-button:focus {
   background: #4e54c8;
   color: #fff;
 }
