@@ -1,0 +1,129 @@
+* {box-sizing: border-box; margin: 0; padding: 0;}
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f8fd;
+  color: #23244a;
+  min-height: 100vh;
+}
+header {
+  background: #4e54c8;
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#toggle-theme {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  color: #4e54c8;
+  padding: 6px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+}
+#menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  background: #4e54c8;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#menu-toggle .bar {
+  width: 22px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+}
+.menu {
+  display: flex;
+  gap: 16px;
+}
+.menu a {
+  color: #4e54c8;
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.menu a:hover { background: #e6eaff; }
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 18px;
+}
+.hero, .features, .about {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 14px rgba(78,84,200,0.08);
+  margin-bottom: 26px;
+  padding: 28px 18px;
+}
+.cta-button {
+  background: #4e54c8;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: background 0.19s;
+  display: inline-block;
+}
+.cta-button:hover { background: #23244a; }
+.features-grid {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.feature-card {
+  background: #f6f8fd;
+  border-radius: 10px;
+  flex: 1 1 220px;
+  padding: 17px;
+  text-align: center;
+  margin: 7px 0;
+}
+footer {
+  background: #4e54c8;
+  color: #fff;
+  text-align: center;
+  padding: 13px 0;
+  font-size: .97rem;
+  margin-top: 18px;
+}
+@media (max-width:700px) {
+  main { padding: 8px;}
+  .features-grid { flex-direction: column; gap: 7px;}
+  nav { flex-direction: column; padding: 9px 6px;}
+  .menu { flex-direction: column; gap: 3px;}
+  #menu-toggle { display: flex;}
+  .menu { display: none;}
+  .menu.open { display: flex;}
+}
+body.dark {
+  background: #1a1b2c;
+  color: #eee;
+}
+body.dark header,
+body.dark footer,
+body.dark .hero,
+body.dark .features,
+body.dark .about {
+  background: #23244a;
+  color: #fff;
+}
+body.dark .menu a { color: #fff;}
+body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #fff;}
