@@ -1,4 +1,3 @@
-/* --- RESET & BASE --- */
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +40,6 @@ a:hover, a:focus {
   color: #0078d7;
 }
 
-/* --- HEADER & NAV --- */
 header {
   width: 100%;
   background: #4e54c8;
@@ -72,7 +70,6 @@ header {
   color: #fff;
 }
 
-/* --- MENU --- */
 nav {
   background: #f0f0fa;
   box-shadow: 0 3px 8px rgba(105, 105, 160, 0.04);
@@ -137,24 +134,23 @@ nav {
   }
 }
 
-/* --- MAIN / HERO --- */
 .hero {
   padding: 48px 0 36px 0;
   background: linear-gradient(120deg, #e1e4ee 64%, #fff 100%);
   text-align: center;
 }
 
-.hero h1 {
+.hero h1, p{
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 18px;
   letter-spacing: 1.3px;
 }
 
-.hero p {
+.hero  {
   font-size: 1.2rem;
   margin-bottom: 24px;
-color: #ffffff;
+color: #00000;
 }
 
 /* --- BUTTONS --- */
