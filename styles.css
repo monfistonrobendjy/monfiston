@@ -9,8 +9,9 @@
     }
     .form-box {
       background: #ffffff;
-      padding: 28px 20px;
-      border-radius: 10px;
+      padding: 50px 20px;
+      border-radius: 30px;
+      border-color : #3498db;
       box-shadow: 50px 50px 50px rgba(100,100,100,100);
       width: 100%;
       max-width: 340px;
