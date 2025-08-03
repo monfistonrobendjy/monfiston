@@ -1,68 +1,23 @@
 <!DOCTYPE html>
 <html lang="ht">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div id="register" class="section">
-        <div class="auth-page" style="margin: -2rem; min-height: 80vh">
-          <div class="auth-container">
-            <div class="auth-header">
-              <h1>Enskripsyon</h1>
-              <p>kreye kont ou</p>
-            </div>
-
-            <form id="formSubmit">
-              <div class="form-group">
-                <label for="nom">Non</label>
-                <input type="text" id="nom" name="nom" required />
-              </div>
-
-              <div class="form-group">
-                <label for="prenom">Prenon</label>
-                <input type="text" id="prenom" name="prenom" required />
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-
-              <div class="form-group">
-                <label for="password">Mo de pas</label>
-                <input type="password" id="password" name="password" required />
-              </div>
-
-              <div class="form-group">
-                <label for="confirmPassword">Konfime mot de pas ou</label>
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  required
-                />
-              </div>
-
-              <div style="text-align: center">
-                <button type="submit" class="btn" style="width: 100%">
-                  Enskri
-                </button>
-              </div>
-            </form>
-
-            <div class="auth-links">
-              <p>
-                Mwen gen kont deja ?
-                <a href="connexion.html">Rekonete</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+ <link 
+  <title>Enskripsyon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    @media (max-width: 400px) {
+      .form-box { padding: 14px 2vw; }
+    }
+  </style>
+</head>
+<body>
+  <form class="form-box">
+    <h2>Enskripsyon</h2>
+    <input type="text" placeholder="Non" required>
+    <input type="email" placeholder="Imèl" required>
+    <input type="password" placeholder="Modpas" required>
+    <button type="submit">Enskri</button>
+  </form>
+</body>
 </html>
