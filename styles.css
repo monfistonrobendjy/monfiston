@@ -1,5 +1,5 @@
 /*Enskripsyon css*/
-<style>
+
     body {
       background: #f8f9ff;
       font-family: Arial, sans-serif;
@@ -47,4 +47,3 @@
     @media (max-width: 400px) {
       .form-box { padding: 14px 2vw; }
     }
-  </style>
