@@ -44,7 +44,7 @@
     button:hover {
       background: #23244a;
     }
-    @media (max-width: 400px) {
+    @media (max-width: 900px) {
       .form-box { padding: 14px 2vw; }
     }
   
