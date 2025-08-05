@@ -14,7 +14,7 @@ header {
   align-items: center;
 }
 #toggle-theme {
-  background: #fff;
+  background: #1a1b2c;
   border: none;
   border-radius: 8px;
   color: #4e54c8;
@@ -65,7 +65,7 @@ main {
   padding: 18px;
 }
 .hero, .features, .about {
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
   box-shadow: 4px 2px 14px rgba(78,84,200,0.08);
   margin-bottom: 26px;
@@ -98,7 +98,7 @@ main {
 }
 footer {
   background: #4e54c8;
-  color: #fff;
+  color: #667eea;
   text-align: center;
   padding: 13px 0;
   font-size: .97rem;
