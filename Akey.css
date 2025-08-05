@@ -87,7 +87,7 @@ main {
 .cta-button:hover { background: #23244a; }
 .features-grid {
   display: flex;
-  gap: 18px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 .feature-card {
@@ -127,4 +127,4 @@ body.dark .about {
   color: #667eea;
 }
 body.dark .menu a { color: #000;}
-body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #fff;}
+body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #000;}
