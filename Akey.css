@@ -120,10 +120,10 @@ body.dark {
 body.dark header,
 body.dark footer,
 body.dark .hero,
-body.dark .features,
 body.dark .about {
   background: #23244a;
   color: #fff;
 }
+.features{color: #000;}
 body.dark .menu a { color: #fff;}
 body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #fff;}
