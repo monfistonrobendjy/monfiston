@@ -119,7 +119,7 @@ body.dark {
 }
 body.dark header,
 body.dark footer,
-body.dark .hero,
+body.dark .hero,.features,
 body.dark .about {
   background: #23244a;
   color: #000;
