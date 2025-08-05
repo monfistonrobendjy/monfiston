@@ -125,5 +125,5 @@ body.dark .about {
   color: #fff;
 }
 .features{color: #000;}
-body.dark .menu a { color: #fff;}
+body.dark .menu a { color: #000;}
 body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #fff;}
