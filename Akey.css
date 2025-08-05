@@ -65,7 +65,7 @@ main {
   padding: 18px;
 }
 .hero, .features, .about {
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 4px 2px 14px rgba(78,84,200,0.08);
   margin-bottom: 26px;
