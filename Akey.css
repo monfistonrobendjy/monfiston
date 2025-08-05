@@ -12,7 +12,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-text-shadow: 30px;
 }
 #toggle-theme {
   background: #fff;
@@ -66,7 +65,7 @@ main {
   padding: 18px;
 }
 .hero, .features, .about {
-  background: #000;
+  background: #23244a;
   border-radius: 12px;
   box-shadow: 0 2px 14px rgba(78,84,200,0.08);
   margin-bottom: 26px;
