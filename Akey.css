@@ -67,7 +67,7 @@ main {
 .hero, .features, .about {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 14px rgba(78,84,200,0.08);
+  box-shadow: 4px 2px 14px rgba(78,84,200,0.08);
   margin-bottom: 26px;
   padding: 28px 18px;
 }
@@ -124,5 +124,5 @@ body.dark .about {
   background: #23244a;
   color: #fff;
 }
-body.dark .menu a { color: #000;}
+body.dark .menu a { color: #fff;}
 body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #fff;}
