@@ -9,5 +9,5 @@ menuBtn.addEventListener('click', () => {
 const themeBtn = document.getElementById('toggle-theme');
 themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
-  themeBtn.textContent = document.body.classList.contains('dark') ? 'Klè' : 'Thème';
+  themeBtn.textContent = document.body.classList.contains('dark') ? '🌝' : '🌚';
 });
