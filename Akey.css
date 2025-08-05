@@ -1,4 +1,4 @@
-6t* {box-sizing: border-box; margin: 0; padding: 0;}
+* {box-sizing: border-box; margin: 0; padding: 0;}
 body {
   font-family: Arial, sans-serif;
   background: #f6f8fd;
@@ -22,8 +22,6 @@ header {
   font-size: 1rem;
   cursor: pointer;
 }
-h1, h2, h3{
-   color: #000}
 nav {
   display: flex;
   align-items: center;
