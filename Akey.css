@@ -12,6 +12,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-shadow: 50px 20px 30px;
+  text-anim: right left;
 }
 #toggle-theme {
   background: #1a1b2c;
@@ -26,7 +28,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background: #fff;
+  background: #000;
 }
 #menu-toggle {
   display: none;
