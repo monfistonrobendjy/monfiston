@@ -12,7 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-shadow: 50px 20px 30px;
+  text-shadow: 0 50px 80px;
   text-anim: right left;
 }
 h2{color:#000}
