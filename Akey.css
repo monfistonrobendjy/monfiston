@@ -15,6 +15,7 @@ header {
   text-shadow: 50px 20px 30px;
   text-anim: right left;
 }
+h2{color:#000}
 #toggle-theme {
   background: #1a1b2c;
   border: none;
@@ -28,7 +29,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background: #000;
+  background: #f6f8fd;
 }
 #menu-toggle {
   display: none;
