@@ -39,7 +39,7 @@ nav {
   border: none;
   border-radius: 8px;
   padding: 6px 10px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   margin-right: 10px;
 }
@@ -127,6 +127,5 @@ body.dark .about {
   background: #23244a;
   color: #667eea;
 }
-h2{color:#fff}
 body.dark .menu a { color: #000;}
 body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #fff;}
