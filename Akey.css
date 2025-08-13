@@ -118,7 +118,7 @@ body.dark {
   background: #1a1b2c;
   color: #eee;
 }
-body.dark footer,.hero,.features,.about {
+body.dark .hero,.features,.about {
  color:  #000;
 }
 body.dark #toggle-theme, #menu-toggle { background: #23244a; }
