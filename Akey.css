@@ -63,7 +63,7 @@ main {
   margin: 30px auto;
   padding: 18px;
 }
-.hero, .features, .about {
+.hero, .about {
   background: #8a95d4;
   border-radius: 12px;
   box-shadow: 4px 2px 14px rgba(78,84,200,0.08);
@@ -71,6 +71,7 @@ main {
   padding: 28px 18px;
   color: #fff;
 }
+.features{color: #000;}
 .cta-button {
   background: #4e54c8;
   color: #000;
