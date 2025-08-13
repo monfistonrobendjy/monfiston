@@ -39,7 +39,7 @@ nav {
   border: none;
   border-radius: 8px;
   padding: 6px 10px;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   margin-right: 10px;
 }
@@ -124,4 +124,4 @@ body.dark header,footer,.hero,.features,.about {
  color: #fff;
 }
 body.dark .menu a { color: #fff;}
-body.dark #toggle-theme, #menu-toggle { background: #23244a; color: #000;}
+body.dark #toggle-theme, #menu-toggle { background: #23244a; }
