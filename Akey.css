@@ -120,10 +120,7 @@ body.dark {
   background: #1a1b2c;
   color: #eee;
 }
-body.dark header,
-body.dark footer,
-body.dark .hero,.features,
-body.dark .about {
+body.dark header,footer,.hero,.features,.about {
   background: #23244a;
   color: #667eea;
 }
@@ -131,4 +128,4 @@ body.dark .about {
 color: #000;
 }
 body.dark .menu a { color: #fff;}
-body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #fff;}
+body.dark #toggle-theme, #menu-toggle { background: #23244a; color: #fff;}
