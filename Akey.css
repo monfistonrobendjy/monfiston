@@ -1,6 +1,6 @@
 * {box-sizing: border-box; margin: 0; padding: 0;}
 body {
-  
+ font-family: Arial, sans-serif;
   background: #9d9eb0;
   
 }
@@ -43,7 +43,7 @@ nav {
 #menu-toggle .bar {
   width: 22px;
   height: 3px;
-  background: #fff;
+  background: #b8b2b8;
   border-radius: 2px;
   display: block;
 }
@@ -73,7 +73,7 @@ main {
 }
 .cta-button {
   background: #4e54c8;
-  color: #fff;
+  color: #000;
   padding: 10px 22px;
   border-radius: 8px;
   text-decoration: none;
