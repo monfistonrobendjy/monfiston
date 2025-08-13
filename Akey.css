@@ -128,7 +128,7 @@ body.dark .about {
   color: #667eea;
 }
 #menu-toggle {
-color: #fff
+color: #000;
 }
-body.dark .menu a { color: #000;}
+body.dark .menu a { color: #fff;}
 body.dark #toggle-theme, body.dark #menu-toggle { background: #23244a; color: #fff;}
