@@ -121,5 +121,5 @@ body.dark {
 body.dark header,footer,.hero,.features,.about {
  color:  #fff;
 }
-body.dark .menu a { color: #fff;}
+body.dark .menu a { color: #000;}
 body.dark #toggle-theme, #menu-toggle { background: #23244a; }
