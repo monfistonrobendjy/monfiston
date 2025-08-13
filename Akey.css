@@ -1,4 +1,4 @@
-u* {box-sizing: border-box; margin: 0; padding: 0;}
+ * {box-sizing: border-box; margin: 0; padding: 0;}
 body {
   background: #9d9eb0;
   
