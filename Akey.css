@@ -12,7 +12,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-shadow: 0 50px 80px;
   text-anim: right left;
 }
 #toggle-theme {
@@ -38,7 +37,7 @@ nav {
   border: none;
   border-radius: 8px;
   padding: 6px 10px;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   margin-right: 10px;
 }
