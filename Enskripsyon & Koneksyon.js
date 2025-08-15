@@ -1,4 +1,4 @@
-// Enskripsyon & Koneksyon.js
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.form-box');
     
@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Enskripsyon & Koneksyon.js (pou koneksyon)
+// koneksyon
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.form-box');
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Jwenn valè yo
+        // Valè yo
         const email = form.querySelector('input[type="email"]').value;
         const password = form.querySelector('input[type="password"]').value;
         
@@ -50,11 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const itilizateStorage = localStorage.getItem(email);
         
         if (!itilizateStorage) {
-            alert('Pa gen kont ki asosye ak imèl sa a');
+            alert('Pa gen kont  a imèl sa a');
             return;
         }
         
-        // Konvèti JSON nan objè
+        // JSON 
         const itilizate = JSON.parse(itilizateStorage);
         
         // Verifye modpas
