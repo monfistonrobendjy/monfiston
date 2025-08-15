@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem(email, JSON.stringify(itilizate));
         
         // Afiche mesaj siksè epi redirije
-        alert(`Byenvini ${non} ${prenon} pami nou`);
+        alert(`Byenvini ${non} pami nou`);
         window.location.href = 'connexion.html';
     });
 });
