@@ -67,6 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sessionStorage.setItem('kounye_a', JSON.stringify(itilizate));
         
         // Redirije sou paj welkòm
-        window.location.href = 'byenvini.html';
+        window.location.href = 'ajouterEtudiant.html';
     });
 });
