@@ -194,8 +194,8 @@
         }
   
 
-document.getElementById('search').addEventListener('click', () => {
-  const query = document.getElementById('search').value.toLowerCase();
+document.getElementById('search-btn').addEventListener('click', () => {
+  const query = document.getElementById('search-input').value.toLowerCase();
   const students = getStudents(); 
   const filtered = students.filter(s =>
     s.firstName.toLowerCase().includes(query) ||
