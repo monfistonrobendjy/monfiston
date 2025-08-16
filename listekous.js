@@ -96,7 +96,7 @@
                 }
             } else {
                 const newStudent = {
-                    id: 'stu-' + Date.now(),
+                    id: 'etid-' + Date.now(),
                     firstName,
                     lastName,
                     phone,
@@ -161,11 +161,27 @@
             function addSampleData() {
             const sampleStudents = [
                 {
-                    id: 'B42-Ta61-G32',
+                    id: '',
                     firstName: "B.Tawens.G",
                     lastName: "PIERRE",
                     phone: "42523261",
-                    email: "pierre@example.com",
+                    email: "pierre@gmail.com",
+                    createdAt: ""
+                },
+{
+                    id: '',
+                    firstName: "Brownson",
+                    lastName: "DORCILIEN",
+                    phone: "41150563",
+                    email: "brown@gmail.com",
+                    createdAt: ""
+                },
+{
+                    id: '',
+                    firstName: "Robendjy",
+                    lastName: "MONFISTON",
+                    phone: "41109375",
+                    email: "monfiston@gmail.com",
                     createdAt: ""
                 },
                  ];
