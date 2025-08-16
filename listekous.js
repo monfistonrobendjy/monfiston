@@ -158,7 +158,17 @@
                 notification.classList.remove('show');
             }, 3000);
         }
-            
+            function addSampleData() {
+            const sampleStudents = [
+                {
+                    id: 'stu-1688321234567',
+                    firstName: "Jean",
+                    lastName: "Pierre",
+                    phone: "34-22-5555",
+                    email: "jeanerre@example.com",
+                    createdAt: ""
+                },
+                 ];
             localStorage.setItem(STORAGE_KEY, JSON.stringify(sampleStudents));
             loadStudents();
         }
