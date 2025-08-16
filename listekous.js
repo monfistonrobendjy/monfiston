@@ -193,3 +193,15 @@
             addSampleData();
         }
   
+
+document.getElementById('search').addEventListener('click', () => {
+  const query = document.getElementById('search').value.toLowerCase();
+  const students = getStudents(); 
+  const filtered = students.filter(s =>
+    s.firstName.toLowerCase().includes(query) ||
+    s.lastName.toLowerCase().includes(query) ||
+    s.phone.includes(query) ||
+    s.email.toLowerCase().includes(query)
+  );
+  renderStudents(filtered); 
+});
