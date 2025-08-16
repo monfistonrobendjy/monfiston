@@ -162,8 +162,8 @@
             const sampleStudents = [
                 {
                     id: 'B42-Ta61-G32',
-                    firstName: "B.TAWENS.G",
-                    lastName: "Pierre",
+                    firstName: "B.Tawens.G",
+                    lastName: "PIERRE",
                     phone: "42523261",
                     email: "pierre@example.com",
                     createdAt: ""
