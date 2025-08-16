@@ -161,11 +161,11 @@
             function addSampleData() {
             const sampleStudents = [
                 {
-                    id: 'stu-1688321234567',
-                    firstName: "Jean",
+                    id: 'B42-Ta61-G32',
+                    firstName: "B.TAWENS.G",
                     lastName: "Pierre",
-                    phone: "34-22-5555",
-                    email: "jeanerre@example.com",
+                    phone: "42523261",
+                    email: "pierre@example.com",
                     createdAt: ""
                 },
                  ];
