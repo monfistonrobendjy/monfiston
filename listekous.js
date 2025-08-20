@@ -196,4 +196,5 @@
 
 
 
-
+function generatePDF() {
+        const element = document.getElementBy
