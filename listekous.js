@@ -197,4 +197,5 @@
 
 
 function generatePDF() {
-        const element = document.getElementBy
+        const element = document.getElementById(`student-form`);
+        html2pdf().from(element).save();}
