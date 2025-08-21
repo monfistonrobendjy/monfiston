@@ -12,7 +12,7 @@
         
         .container {
            max-width: 1000px;
-            width: 80%;
+            width: 90%;
             background: white;
             border-radius: 15px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.3);
@@ -87,7 +87,7 @@
         }
         
         input {
-            width: 100%;
+            width: 90%;
             padding: 14px;
             border: 1px solid #ddd;
             border-radius: 8px;
