@@ -48,6 +48,8 @@
         @media (max-width: 900px) {
             main {
                 grid-template-columns: 1fr;
+                          gap: 25px;
+            margin-top: 20px;
             }
         }
         
