@@ -76,13 +76,9 @@
         }
         
         form {
-           background: #ffffff;
-      padding: 50px 20px;
-      border-radius: 30px;
-      border-color : #3498db;
-      box-shadow: 0 0 50px rgba(100,100,100,100);
-      width: 100%;
-      max-width: 340px;
+           display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         
         input {
@@ -125,7 +121,7 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 15px;
         }
         
         .student-item {
