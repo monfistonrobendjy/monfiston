@@ -22,13 +22,14 @@
         header {
             text-align: center;
             padding: 30px 0;
-            color: white;
+            color: #1a2a6c;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         header h1 {
             font-size: 2.8rem;
             margin-bottom: 10px;
+           
         }
         .cta-button {
   background: #4e54c8;
