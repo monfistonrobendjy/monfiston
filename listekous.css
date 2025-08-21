@@ -11,8 +11,12 @@
 }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+           max-width: 1000px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
         }
         
         header {
