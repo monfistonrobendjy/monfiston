@@ -3,41 +3,743 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajoute Etidyan</title>
-<link rel="stylesheet" href="listekous.css">
-  <Ajoute yon nouvo Etidyan>
+    <title>Jesyon Etidyan - Foto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .form-section, .list-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .form-card, .list-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .form-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .photo-upload {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .photo-item {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .photo-preview {
+            width: 100%;
+            height: 120px;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .photo-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-label {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .btn-upload {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .btn-upload:hover {
+            background: #2980b9;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-submit:hover {
+            background: #27ae60;
+        }
+
+        .student-list {
+            list-style: none;
+        }
+
+        .student-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+        }
+
+        .student-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .student-name {
+            font-weight: 700;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+
+        .student-id {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .student-contact {
+            margin-bottom: 15px;
+        }
+
+        .student-contact div {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .student-photos {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            overflow-x: auto;
+            padding: 5px;
+        }
+
+        .student-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 1px solid #eee;
+        }
+
+        .student-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .student-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .edit-btn {
+            background: #f39c12;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background: #e67e22;
+        }
+
+        .delete-btn {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background: #c0392b;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 40px 20px;
+            color: #7f8c8d;
+        }
+
+        .empty-message i {
+            font-size: 50px;
+            margin-bottom: 15px;
+            color: #bdc3c7;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            color: white;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            background: #2ecc71;
+        }
+
+        .notification.error {
+            background: #e74c3c;
+        }
+
+        .highlight {
+            animation: highlight 2s ease;
+        }
+
+        @keyframes highlight {
+            0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.5); }
+            50% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0.5); }
+            100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .photo-upload {
+                flex-direction: column;
+            }
+        }
+
+        .pdf-btn {
+            padding: 10px 15px;
+            background: #9b59b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .pdf-btn:hover {
+            background: #8e44ad;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
         <header>
-            <h1><i class="fas fa-user-graduate"></i>Ajoute Etidyan</h1>
-             <a href="index.html" class="cta-button">Tounen</a><br><br>
-        <a href="Akey.html" class="cta-button">Admin</a>
-        </header> 
-       <div class="container">
-      <main>
-            <section class="card form-card">
-                <h2><i class="fas fa-user-plus"></i> Ajoute Yon Nouvo Etidyan</h2>
-                <form id="student-form">
-                    <input type="hidden" id="student-id" >
-                    <input type="text" id="first-name" placeholder="Non" required>
-                    <input type="text" id="last-name" placeholder="Siyati" required>
-                    <input type="number" id="phone" placeholder="Nimewo Telefòn" required>
-                    <input type="email" id="email" placeholder="Imèl" required>
-                    <input type="file" id="file 1" required >Foto devan kat elektoral ou
-                    <input type="file" id="file 2" required>Foto do kat elektoral ou
-                    <input type="file" id="file 3" required>Foto vizaj ou
-                    <button onclikck="generatePDF()" required>
-                          <i class="fas fa-plus-circle"></i>Telechaje fomilèw</button>
-                    <button type="submit" id="submit-btn">
-                        <i class="fas fa-plus-circle"></i> Ajoute</button>
-                    
-                </form>
+            <h1>Jesyon Etidyan</h1>
+            <p class="subtitle">Ajoute ak jere tout enfòmasyon etidyan yo</p>
+        </header>
+
+        <div class="main-content">
+            <section class="form-section">
+                <div class="form-card" id="student-form">
+                    <h2 class="form-title">Fòm Enskripsyon</h2>
+                    <form id="student-form-data">
+                        <input type="hidden" id="student-id">
+                        
+                        <div class="form-group">
+                            <label for="first-name">Non</label>
+                            <input type="text" id="first-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="last-name">Siyati</label>
+                            <input type="text" id="last-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Nimewo Telefòn</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Imèl</label>
+                            <input type="email" id="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Foto Obligatwa</label>
+                            <div class="photo-upload">
+                                <div class="photo-item">
+                                    <div class="photo-preview" id="preview-front-electoral">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <span class="photo-label">Foto Devan Kat Elektoral</span>
+                                    <input type="file" accept="image/*" id="front-electoral" class="input-file" style="display: none;">
+                                    <button type="button" class="btn-upload" onclick="document.getElementById('front-electoral').click()">Chwazi Foto</button>
+                                </div>
+                                
+                                <div class="photo-item">
+                                    <div class="photo-preview" id="preview-back-electoral">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <span class="photo-label">Foto Do Kat Elektoral</span>
+                                    <input type="file" accept="image/*" id="back-electoral" class="input-file" style="display: none;">
+                                    <button type="button" class="btn-upload" onclick="document.getElementById('back-electoral').click()">Chwazi Foto</button>
+                                </div>
+                                
+                                <div class="photo-item">
+                                    <div class="photo-preview" id="preview-identity">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <span class="photo-label">Foto Idantite</span>
+                                    <input type="file" accept="image/*" id="identity" class="input-file" style="display: none;">
+                                    <button type="button" class="btn-upload" onclick="document.getElementById('identity').click()">Chwazi Foto</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit" id="submit-btn">
+                            <i class="fas fa-plus-circle"></i> Ajoute
+                        </button>
+                    </form>
+                </div>
+                
+                <button class="pdf-btn" onclick="generatePDF()">
+                    <i class="fas fa-file-pdf"></i> Jenere PDF
+                </button>
             </section>
-        </main>
+            
+            <section class="list-section">
+                <div class="list-card">
+                    <h2 class="form-title">Lis Etidyan Yo</h2>
+                    <ul class="student-list" id="student-list">
+                        <!-- Students will be listed here -->
+                    </ul>
+                </div>
+            </section>
+        </div>
         
-        <div class="notification" id="notification"></div>
+        <div id="notification" class="notification"></div>
     </div>
 
-    <script src="listekous.js"></script>
+    <script>
+        const STORAGE_KEY = "school_students";
+
+        const studentForm = document.getElementById('student-form-data');
+        const studentList = document.getElementById('student-list');
+        const submitBtn = document.getElementById('submit-btn');
+        const notification = document.getElementById('notification');
+
+        const studentIdInput = document.getElementById('student-id');
+        const firstNameInput = document.getElementById('first-name');
+        const lastNameInput = document.getElementById('last-name');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+
+        // Photo inputs
+        const frontElectoralInput = document.getElementById('front-electoral');
+        const backElectoralInput = document.getElementById('back-electoral');
+        const identityInput = document.getElementById('identity');
+
+        // Photo previews
+        const previewFrontElectoral = document.getElementById('preview-front-electoral');
+        const previewBackElectoral = document.getElementById('preview-back-electoral');
+        const previewIdentity = document.getElementById('preview-identity');
+
+        // Store current photo data
+        let currentFrontElectoral = null;
+        let currentBackElectoral = null;
+        let currentIdentity = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadStudents();
+            setupEventListeners();
+        });
+
+        function setupEventListeners() {
+            studentForm.addEventListener('submit', saveStudent);
+            
+            // Photo upload event listeners
+            frontElectoralInput.addEventListener('change', (e) => handlePhotoUpload(e, 'front'));
+            backElectoralInput.addEventListener('change', (e) => handlePhotoUpload(e, 'back'));
+            identityInput.addEventListener('change', (e) => handlePhotoUpload(e, 'identity'));
+        }
+
+        function handlePhotoUpload(event, type) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const dataURL = e.target.result;
+                
+                switch(type) {
+                    case 'front':
+                        currentFrontElectoral = dataURL;
+                        previewFrontElectoral.innerHTML = `<img src="${dataURL}" alt="Foto Devan Kat Elektoral">`;
+                        break;
+                    case 'back':
+                        currentBackElectoral = dataURL;
+                        previewBackElectoral.innerHTML = `<img src="${dataURL}" alt="Foto Do Kat Elektoral">`;
+                        break;
+                    case 'identity':
+                        currentIdentity = dataURL;
+                        previewIdentity.innerHTML = `<img src="${dataURL}" alt="Foto Idantite">`;
+                        break;
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function loadStudents() {
+            const students = getStudents();
+            renderStudents(students);
+        }
+
+        function getStudents() {
+            const studentsJSON = localStorage.getItem(STORAGE_KEY);
+            return studentsJSON ? JSON.parse(studentsJSON) : [];
+        }
+
+        function saveStudents(students) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(students));
+        }
+
+        function renderStudents(students) {
+            if (students.length === 0) {
+                studentList.innerHTML = `
+                    <div class="empty-message">
+                        <i class="fas fa-user-graduate"></i>
+                        <p>Pa gen etidyan anrejistre. Ajoute premye etidyan ou a!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            studentList.innerHTML = '';
+
+            students.forEach(student => {
+                const studentItem = document.createElement('li');
+                studentItem.className = 'student-item';
+                
+                let photosHTML = '';
+                if (student.frontElectoral || student.backElectoral || student.identity) {
+                    photosHTML = '<div class="student-photos">';
+                    if (student.frontElectoral) {
+                        photosHTML += `<div class="student-photo"><img src="${student.frontElectoral}" alt="Foto Devan Kat Elektoral"></div>`;
+                    }
+                    if (student.backElectoral) {
+                        photosHTML += `<div class="student-photo"><img src="${student.backElectoral}" alt="Foto Do Kat Elektoral"></div>`;
+                    }
+                    if (student.identity) {
+                        photosHTML += `<div class="student-photo"><img src="${student.identity}" alt="Foto Idantite"></div>`;
+                    }
+                    photosHTML += '</div>';
+                }
+                
+                studentItem.innerHTML = `
+                    <div class="student-header">
+                        <div class="student-name">${student.firstName} ${student.lastName}</div>
+                        <div class="student-id">${student.id}</div>
+                    </div>
+                    <div class="student-contact">
+                        <div><i class="fas fa-phone"></i> ${student.phone}</div>
+                        <div><i class="fas fa-envelope"></i> ${student.email}</div>
+                    </div>
+                    ${photosHTML}
+                    <div class="student-actions">
+                        <button class="action-btn edit-btn" onclick="editStudent('${student.id}')">
+                            <i class="fas fa-edit"></i> Modifye
+                        </button>
+                        <button class="action-btn delete-btn" onclick="deleteStudent('${student.id}')">
+                            <i class="fas fa-trash"></i> Efase
+                        </button>
+                    </div>
+                `;
+                studentList.appendChild(studentItem);
+            });
+        }
+
+        function saveStudent(e) {
+            e.preventDefault();
+
+            const students = getStudents();
+            const studentId = studentIdInput.value;
+            const firstName = firstNameInput.value;
+            const lastName = lastNameInput.value;
+            const phone = phoneInput.value;
+            const email = emailInput.value;
+
+            if (studentId) {
+                // Editing existing student
+                const index = students.findIndex(s => s.id === studentId);
+                if (index !== -1) {
+                    students[index] = {
+                        ...students[index],
+                        firstName,
+                        lastName,
+                        phone,
+                        email,
+                        frontElectoral: currentFrontElectoral || students[index].frontElectoral,
+                        backElectoral: currentBackElectoral || students[index].backElectoral,
+                        identity: currentIdentity || students[index].identity
+                    };
+                    showNotification("Etidyan mete ajou avèk siksè!", "success");
+                }
+            } else {
+                // Adding new student
+                const newStudent = {
+                    id: 'etid-' + Date.now(),
+                    firstName,
+                    lastName,
+                    phone,
+                    email,
+                    frontElectoral: currentFrontElectoral,
+                    backElectoral: currentBackElectoral,
+                    identity: currentIdentity,
+                    createdAt: new Date().toISOString()
+                };
+                students.push(newStudent);
+                showNotification("Etidyan ajoute avèk siksè!", "success");
+            }
+
+            saveStudents(students);
+            loadStudents();
+            resetForm();
+        }
+
+        function editStudent(id) {
+            const students = getStudents();
+            const student = students.find(s => s.id === id);
+
+            if (student) {
+                studentIdInput.value = student.id;
+                firstNameInput.value = student.firstName;
+                lastNameInput.value = student.lastName;
+                phoneInput.value = student.phone;
+                emailInput.value = student.email;
+
+                // Set photo previews
+                if (student.frontElectoral) {
+                    currentFrontElectoral = student.frontElectoral;
+                    previewFrontElectoral.innerHTML = `<img src="${student.frontElectoral}" alt="Foto Devan Kat Elektoral">`;
+                }
+                if (student.backElectoral) {
+                    currentBackElectoral = student.backElectoral;
+                    previewBackElectoral.innerHTML = `<img src="${student.backElectoral}" alt="Foto Do Kat Elektoral">`;
+                }
+                if (student.identity) {
+                    currentIdentity = student.identity;
+                    previewIdentity.innerHTML = `<img src="${student.identity}" alt="Foto Idantite">`;
+                }
+
+                submitBtn.innerHTML = '<i class="fas fa-save"></i> Mete ajou';
+
+                document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth' });
+
+                studentForm.classList.add('highlight');
+                setTimeout(() => {
+                    studentForm.classList.remove('highlight');
+                }, 2000);
+            }
+        }
+
+        function deleteStudent(id) {
+            if (confirm('Èske w sèten ou vle efase etidyan sa a?')) {
+                const students = getStudents();
+                const filteredStudents = students.filter(s => s.id !== id);
+                saveStudents(filteredStudents);
+                loadStudents();
+                showNotification("Etidyan efase avèk siksè!", "success");
+            }
+        }
+
+        function resetForm() {
+            studentForm.reset();
+            studentIdInput.value = '';
+            submitBtn.innerHTML = '<i class="fas fa-plus-circle"></i> Ajoute';
+            
+            // Reset photo previews
+            previewFrontElectoral.innerHTML = '<i class="fas fa-camera"></i>';
+            previewBackElectoral.innerHTML = '<i class="fas fa-camera"></i>';
+            previewIdentity.innerHTML = '<i class="fas fa-camera"></i>';
+            
+            currentFrontElectoral = null;
+            currentBackElectoral = null;
+            currentIdentity = null;
+        }
+
+        function showNotification(message, type) {
+            notification.textContent = message;
+            notification.className = `notification ${type} show`;
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        function addSampleData() {
+            const sampleStudents = [
+                {
+                    id: 'etid-1',
+                    firstName: "B.Tawens.G",
+                    lastName: "PIERRE",
+                    phone: "42523261",
+                    email: "pierre@gmail.com",
+                    createdAt: new Date().toISOString()
+                },
+                {
+                    id: 'etid-2',
+                    firstName: "Brownson",
+                    lastName: "DORCILIEN",
+                    phone: "41150563",
+                    email: "brown@gmail.com",
+                    createdAt: new Date().toISOString()
+                },
+                {
+                    id: 'etid-3',
+                    firstName: "Robendjy",
+                    lastName: "MONFISTON",
+                    phone: "41109375",
+                    email: "monfiston@gmail.com",
+                    createdAt: new Date().toISOString()
+                },
+            ];
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(sampleStudents));
+            loadStudents();
+        }
+
+        // Add sample data if no students exist
+        if (getStudents().length === 0) {
+            addSampleData();
+        }
+
+        function generatePDF() {
+            const element = document.getElementById('student-form');
+            const options = {
+                margin: 10,
+                filename: 'fòm_etidyan.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            html2pdf().set(options).from(element).save();
+        }
+    </script>
 </body>
 </html>
